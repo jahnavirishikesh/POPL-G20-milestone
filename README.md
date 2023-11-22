@@ -47,14 +47,21 @@ We compared different optimisers for our implementation and settled on adam as i
 
 ![optim](https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/8776e03a-56d6-4917-8126-640d11c1cf7f)
 
-- **Programming with objects** : Object-oriented programming, or OOP: A programming paradigm known as object-oriented programming (OOP) arranges code around objects, which are data structures that combine behavior and data. The project makes use of OOP concepts to produce modular and reusable code components.
+- **Object Oriented Programming** : Object-oriented programming, or OOP: A programming paradigm known as object-oriented programming (OOP) arranges code around objects, which are data structures that combine behavior and data. The project makes use of OOP concepts to produce modular and reusable code components.
 
 <img width="758" alt="oops" src="https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/015cdcd9-3a5a-477c-a440-0ae0f4ff46bb">
 
 ## Results
-- We tested the model against data in our dataset that had not been used for training and validation.
-- We got an average loss of 4.2 in python while getting 3.8 in pyro.
+- We tested the model against data in our dataset - **tweets-blogs-news-swiftkey-dataset-4million** -  that has been used for training and validation.
+- An average loss of 4.2 was obtained in python while getting 3.8 in pyro.
 - As the model structure was similar, epochs and data used were identical we can show that the probabilistic nature of pyro improved model accuracy.
-- We also tested the model against different setences and observed the pyro model was able to give more diverse range of predictions to the setences giving it an advantage in real world applications. 
+- We also tested the model against different sentences and observed the pyro model was able to give more diverse range of predictions to the setences giving it an advantage in real world applications. 
 - The models we have used are relatively small and further testing and analysis needs to be done.
-We have attached graphs showing the comparsison between 
+We have attached graphs showing the comparison between Pyro and Python
+
+## Potential for future work
+- **Exploring different probabilistic modeling approaches** : The project could investigate other probabilistic modeling techniques beyond Pyro, such as Variational Autoencoders (VAEs) or Transformer-based probabilistic models. Comparing the performance and creativity of different approaches would provide valuable insights into the effectiveness of probabilistic modeling for sentence completion.
+- **Incorporating additional language features** : The project could extend the models to consider additional language features, such as part-of-speech tagging, semantic relationships, or stylistic patterns. Incorporating these features could enhance the accuracy and diversity of sentence completions.
+- **Investigating different evaluation metrics** : The project could expand the evaluation beyond accuracy to include other relevant metrics, such as fluency, coherence, and originality. This would provide a more comprehensive assessment of the models' ability to generate natural and engaging sentence completions.
+- **Applying the models to other NLP tasks** : The project could explore the applicability of the developed models to other NLP tasks, such as machine translation, text summarization, or dialogue generation. Investigating the transferability of the models across different tasks would demonstrate their broader utility in the NLP domain.
+- **Developing real-world applications** : The project could explore the development of real-world applications that utilize the sentence completion models. For instance, the models could be integrated into chatbots, interactive storytelling platforms, or creative writing tools.
