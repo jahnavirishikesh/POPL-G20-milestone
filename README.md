@@ -1,4 +1,4 @@
-# POPL - Milestone for project - Group 20
+![software_architecture](https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/40aed293-b70d-449b-8ca4-f7a8fa21aa49)# POPL - Milestone for project - Group 20
 
 ## Problem Statement
 Sentence Autocompletion using Pyro and Python - A comparative study based on metrics like accuracy, performance and efficiency
@@ -17,7 +17,8 @@ Sentence Autocompletion using Pyro and Python - A comparative study based on met
 - To make predictions, the model accepts incomplete sentences, converts them into word indexes using a dictionary, and transforms these indexes into tensors for predicting the next word in the sequence. 
 
 In the below diagram we have portrayed our architecture for our LSTM model
-![software_architecture](https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/2efd7ab1-0eb5-4e20-b7b8-5e73f2e1342f)
+![software_architecture](https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/611ff316-f7bf-4691-8adc-f5d0c94d3cbf)
+
 
 ### Pyro Architecture
 - Pyro's architecture follows a layered architecture, where each layer serves a specific purpose and interacts with the layers above and below it.
@@ -29,12 +30,12 @@ In the below diagram we have portrayed our architecture for our LSTM model
 ## POPL Aspects
 - **Bayesian neural network (BNN)** : Bayesian neural network (BNN) is a probabilistic neural network that models uncertainty in the network's weights and biases by using probabilistic programming techniques. BNNs give the network's weights and biases probability distributions. The likelihood function indicates the likelihood of seeing the provided data in accordance with the predictions of the network. It shows how closely the output of the network matches the real data.
   
-  ![pyro_model](https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/1ca566a0-9d14-4eaf-89cf-4c797ae98cc9)
+![pyro_model](https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/3a7f71c0-c3fb-4faf-ad1d-c089d87b2ccd)
 
 - **Inference with evaluators** : In Pyro, inference is the process of estimating the parameters of a probabilistic model given observed data. Pyro uses inference algorithms like Stochastic Variational Inference (SVI). Evaluators are used to evaluate various metrics during the sampling process, such as the loss function, predictive accuracy, or model complexity. This information can be used to guide the sampling process and improve the overall performance of the inference algorithm.
 It takes a model, a guide, and an optimizer as arguments. The model is the probabilistic model that you want to learn the parameters of. The guide is a variational distribution that is used to approximate the posterior distribution. The optimizer is a stochastic optimization algorithm that is used to find the parameters of the guide that minimize the variational Loss.
 
-![svi](https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/38387e28-835a-480c-b215-cfb375c3003a)
+![svi](https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/7eab6863-58ad-428b-9404-57ecec46cf6e)
 
 - The SVI class is designed in a different way than the model.train() function that we use in python. This resulted in the need to read the source code to understand the differences between the two. What we found is that the SVI implementation passes different parameters to the functions compared to the pytorch implementation.
 - Understanding the SVI, optimizer and guide was challenging as pyro documentation is small and expects us to have prior knowledge regarding the topic, creating difficulty in understanding their use and how to implement them.
@@ -45,11 +46,11 @@ It takes a model, a guide, and an optimizer as arguments. The model is the proba
 - **Optimiser** : The optimization techniques we employ are stochastic gradient-based optimizers, which update the model parameters by utilizing the estimated gradients of the loss function. They lie within the category of gradient-based optimizers, but at each iteration they employ an estimated gradient derived from a tiny portion of the training set, rather than the precise gradient. This makes them more effective than gradient-based optimizers, particularly when dealing with big datasets.
 We compared different optimisers for our implementation and settled on adam as it gave the best results. Pyro code is given below:
 
-![optim](https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/8776e03a-56d6-4917-8126-640d11c1cf7f)
+![optim](https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/0a662ec3-d452-4aa9-9557-a105bbc02f94)
 
 - **Object Oriented Programming** : Object-oriented programming, or OOP: A programming paradigm known as object-oriented programming (OOP) arranges code around objects, which are data structures that combine behavior and data. The project makes use of OOP concepts to produce modular and reusable code components.
 
-<img width="758" alt="oops" src="https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/015cdcd9-3a5a-477c-a440-0ae0f4ff46bb">
+<img width="758" alt="oops" src="https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/bb661302-6533-448b-9bb9-8fa980670f30">
 
 ## Results
 - We tested the model against data in our dataset - **tweets-blogs-news-swiftkey-dataset-4million** -  that has been used for training and validation.
