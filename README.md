@@ -36,7 +36,9 @@ It takes a model, a guide, and an optimizer as arguments. The model is the proba
 
 ![svi](https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/38387e28-835a-480c-b215-cfb375c3003a)
 
-We faced difficulties in this as the internal use of SVI is different from the way we have used it in our model.train function. Hence we had to make the structure of our model such that we can adapt the use of SVI into the model.
+- The SVI class is designed in a different way than the model.train() function that we use in python. This resulted in the need to read the source code to understand the differences between the two. What we found is that the SVI implementation passes different parameters to the functions compared to the pytorch implementation.
+- Understanding the SVI, optimizer and guide was challenging as pyro documentation is small and expects us to have prior knowledge regarding the topic, creating difficulty in understanding their use and how to implement them.
+- Due to pyro yet being a relatively new language finding resources online that we can refer to was not possible.
 
 - **Probabilistic programming language** : The paradigm of probabilistic programming enables the explicit modeling of uncertainty in models. Deep probabilistic models can be created with Pyro, a probabilistic programming language (PPL). Pyro's language constructs can be used to define a wide range of probabilistic models, from simple to complicated, as it can represent any computable probability distribution.
 
@@ -50,4 +52,9 @@ We compared different optimisers for our implementation and settled on adam as i
 <img width="758" alt="oops" src="https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/015cdcd9-3a5a-477c-a440-0ae0f4ff46bb">
 
 ## Results
-
+- We tested the model against data in our dataset that had not been used for training and validation.
+- We got an average loss of 4.2 in python while getting 3.8 in pyro.
+- As the model structure was similar, epochs and data used were identical we can show that the probabilistic nature of pyro improved model accuracy.
+- We also tested the model against different setences and observed the pyro model was able to give more diverse range of predictions to the setences giving it an advantage in real world applications. 
+- The models we have used are relatively small and further testing and analysis needs to be done.
+We have attached graphs showing the comparsison between 
