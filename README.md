@@ -53,7 +53,7 @@ We compared different optimisers for our implementation and settled on adam as i
 
 ## Results
 - We tested the model against data in our dataset - **tweets-blogs-news-swiftkey-dataset-4million** -  that has been used for training and validation.
-- An average loss of 4.2 was obtained in python while getting 3.8 in pyro.
+- An average loss of **4.2** was obtained in python while getting **3.8** in pyro.
 - As the model structure was similar, epochs and data used were identical we can show that the probabilistic nature of pyro improved model accuracy.
 - We also tested the model against different sentences and observed the pyro model was able to give more diverse range of predictions to the setences giving it an advantage in real world applications. 
 - The models we have used are relatively small and further testing and analysis needs to be done.
