@@ -1,4 +1,4 @@
-![software_architecture](https://github.com/jahnavirishikesh/POPL-G20-milestone/assets/101913971/40aed293-b70d-449b-8ca4-f7a8fa21aa49)# POPL - Milestone for project - Group 20
+# POPL - Milestone for project - Group 20
 
 ## Problem Statement
 Sentence Autocompletion using Pyro and Python - A comparative study based on metrics like accuracy, performance and efficiency
